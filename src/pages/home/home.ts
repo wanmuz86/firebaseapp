@@ -18,7 +18,6 @@ public itemRef: firebase.database.Reference = firebase.database().ref('/items');
 ionViewDidLoad() {
   this.itemRef.on('value', itemSnapshot => {
     // Here we'll work with the list
-console.log(itemSnapshot)
     this.items = [];
     itemSnapshot.forEach( itemSnap => {
       this.items.push(itemSnap.val());

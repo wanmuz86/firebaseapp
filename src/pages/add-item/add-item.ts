@@ -27,8 +27,8 @@ item = {
   }
 
   createPerson(item): void {
-  const itemref: firebase.database.Reference = firebase.database().ref('/items/item');
-  itemref.set({ 
+  const itemref: firebase.database.Reference = firebase.database().ref('/items/');
+  itemref.push({ 
     name:item.name, 
     description:item.description 
   })
