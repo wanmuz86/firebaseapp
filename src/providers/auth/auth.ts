@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AngularFireAuth } from 'angularfire2/auth';
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 
 /*
   Generated class for the AuthProvider provider.

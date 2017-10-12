@@ -9,11 +9,13 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
+import { AddItemPage } from '../pages/add-item/add-item';
 import { AuthProvider } from '../providers/auth/auth';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { HttpModule } from '@angular/http';
+import { DatabaseserviceProvider } from '../providers/databaseservice/databaseservice';
 
 const firebaseConfig = {
    apiKey: "AIzaSyDO6SnzHKc-ZbAUvb34tHHEmg-Rs0KZuog",
@@ -31,7 +33,8 @@ const firebaseConfig = {
     HomePage,
     LoginPage,
     SignupPage,
-    ResetPasswordPage
+    ResetPasswordPage,
+    
   ],
   imports: [
     BrowserModule,
@@ -47,13 +50,15 @@ const firebaseConfig = {
     HomePage,
     LoginPage,
     SignupPage,
-    ResetPasswordPage
+    ResetPasswordPage,
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
+    DatabaseserviceProvider,
 
   ]
 })
